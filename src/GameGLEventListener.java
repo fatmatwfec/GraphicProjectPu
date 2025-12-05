@@ -11,6 +11,10 @@ public class GameGLEventListener extends GameListener{
     private double xmin=-350;
     private double ymax=350;
     private double ymin=-350;
+    private int score1=0;
+    private int score2=0;
+
+
     @Override
     public void init(GLAutoDrawable glAutoDrawable) {
 
@@ -18,6 +22,7 @@ public class GameGLEventListener extends GameListener{
 
     @Override
     public void display(GLAutoDrawable glAutoDrawable) {
+
 
     }
 
@@ -55,6 +60,28 @@ public class GameGLEventListener extends GameListener{
         if(yBall >= ymax ||yBall <= ymin){
             dyBall = -dyBall;
         }
+    }
+    public void player1MakeGoal(){
+        score1++;
+    }
+    public void player2MakeGoal(){
+        score2++;
+    }
+    public boolean hasWinner(){
+        if(score1==3)
+            return true;
+        else if (score2==3)
+            return true;
+        else
+            return false;
+    }
+    public String winner(){
+        if(score1==3)
+            return "player1 is win";
+        else if(score2==3)
+            return "player2 is win";
+        else
+            return null;
     }
 }
 
