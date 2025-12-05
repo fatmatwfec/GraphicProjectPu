@@ -25,7 +25,7 @@ public class Game extends JFrame{
         animator.start();
 
 
-        setTitle("Anim Test");
+        setTitle("hockey");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(700, 700);
         setLocationRelativeTo(null);
